@@ -91,13 +91,6 @@ button {
   color: darkred;
 }
 
-
-/* メイン */
-#frontTitle {
-  text-align: center;
-  color:darkred ;
-}
-
 .vidual {
   text-align: center;
   margin-top: 5%;
@@ -107,8 +100,14 @@ button {
 
 .content {
   margin-left: 10%;
-  margin-bottom: 10px;
 }
+
+/* メイン */
+#frontTitle {
+  text-align: center;
+  color:darkred ;
+}
+
 
 /* スマホ向け */
 @media screen and (max-width: 480px) {
