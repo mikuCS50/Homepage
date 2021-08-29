@@ -1,0 +1,111 @@
+/*
+独自に作成したstylesheetファイルstyles.cssが少なくとも1つあり
+少なくとも5つの異なるCSSセレクタ (例:tag (example) 、class (.example) 、またはID (#example)) を使用
+font-sizeやmarginなど、合計で少なくとも5つの異なるCSSプロパティを使用
+JavaScriptの1つ以上の機能をサイトに統合して、サイトをよりインタラクティブにします。
+    たとえば、JavaScriptを使用して、アラートを追加したり、定期的な間隔で効果を与えたり、ボタン、ドロップダウン、またはフォームにインタラクティブな機能を追加
+レスポンシブデザイン
+
+*/
+
+/* 共通 */
+.header {
+  border-bottom: 1px solid black;
+  text-align: right;
+  margin-top: 2%;
+}
+
+.header a {
+  margin-right: 10%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1 {
+  grid-area: 2 / 1 / 4 / 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div2 {
+  grid-area: 4 / 1 / 6 / 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10%;
+}
+
+.button_group {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  height:50px;
+  width:150px;
+  background-color: gainsboro;
+  border: none;
+  border-radius: 5%;
+  margin-bottom: 30%;
+}
+
+
+/* メイン */
+#frontTitle {
+  text-align: center;
+  color: cornflowerblue;
+}
+
+#frontVidual {
+  height: 300px;
+  width: auto;
+  background-color: gainsboro;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+}
+
+#frontContent div {
+  margin-left: 10%;
+  margin-bottom: 10px;
+}
+
+
+/* スマホ向け */
+@media screen and (max-width: 480px){ 
+  .form {
+    background-color: gray;
+    height: 50px;
+    width: 300px;
+  }
+
+}
+
+/* PC向け */
+@media screen and (min-width: 481px){ 
+
+  .form {
+    background-color: gray;
+    height: 50px;
+    width: 600px;
+  }
+  
+}
+
