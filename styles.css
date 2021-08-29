@@ -91,7 +91,8 @@ button {
 /* スマホ向け */
 @media screen and (max-width: 480px){ 
   .form {
-    background-color: gray;
+    background-color: white;
+    border: 1px solid gray;
     height: 50px;
     width: 300px;
   }
@@ -102,7 +103,8 @@ button {
 @media screen and (min-width: 481px){ 
 
   .form {
-    background-color: gray;
+    background-color: white;
+    border: 1px solid gray;
     height: 50px;
     width: 600px;
   }
