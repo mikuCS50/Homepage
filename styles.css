@@ -43,7 +43,6 @@ a {
   margin-top: 20px;
   display: flex;
   justify-content: center;
-
 }
 
 ul {
@@ -95,19 +94,23 @@ button {
   text-align: center;
   margin-top: 5%;
   margin-bottom: 5%;
-
 }
 
 .content {
   margin-left: 10%;
+  margin-top: 20px;
+}
+
+#greeting {
+  margin-top: 5%;
+  color: gray;
 }
 
 /* メイン */
 #frontTitle {
   text-align: center;
-  color:darkred ;
+  color: darkred;
 }
-
 
 /* スマホ向け */
 @media screen and (max-width: 480px) {
@@ -118,11 +121,10 @@ button {
     width: 300px;
   }
 
-  img{
+  img {
     height: 200px;
     width: auto;
   }
-  
 }
 
 /* PC向け */
@@ -134,9 +136,8 @@ button {
     width: 600px;
   }
 
-  img{
+  img {
     height: 400px;
     width: auto;
   }
-  
 }
