@@ -101,7 +101,6 @@ button {
 
 #greeting {
   margin-top: 5%;
-  color: gray;
 }
 
 .label{
@@ -121,6 +120,7 @@ button {
 
 /* メイン */
 #frontTitle {
+  margin-top: 20px;
   text-align: center;
   color: darkred;
 }
@@ -137,6 +137,7 @@ button {
   img {
     height: 200px;
     width: auto;
+    border:0
   }
 }
 
