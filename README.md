@@ -7,11 +7,13 @@ Websqlを使用しサーバーを立てずにデータを保存できること�
 As an assignment for week 8 of CS50x 2021, I created a website using HTML and CSS.
 I used websql to store data without setting up a server, and web api to search for books.
 
+#### Image
+
 ![](https://i.ibb.co/Ykb5SPh/2021-08-30-190957.jpg)
 ![](https://i.ibb.co/1mVXRPW/2021-08-30-191031.jpg)
 ![](https://i.ibb.co/GxQk9Dw/2021-08-30-191053.jpg)
 
-#### 参考資料
+#### Refferencial materials
 
 - vieportについて
 https://www.kagoya.jp/howto/webhomepage/responsive/<br>
