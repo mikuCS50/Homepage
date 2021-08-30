@@ -11,26 +11,39 @@
         <script>
             window.onload = function(){
 
-                function getInfo(isbn){
-                    console.log(isbn)
+                function getInfo(ibsn){
+                    console.log(ibsn)
                     let request = new XMLHttpRequest();
  
-                    request.open('GET', `https://api.openbd.jp/v1/get?isbn=${isbn}&pretty`, true)
+                    request.open('GET', `https://api.openbd.jp/v1/get?isbn=${ibsn}&pretty`, true)
                     
                     request.responseType = 'json';
         
                     request.onload = function () {
                         let data = this.response;
                         console.log("data: ",data); 
-                        const bookInfo = document.getElementById("breaktime"); 
-                        bookInfo.textContent = data[0].summary.author; 
+                        const publisher = document.getElementById("publisher"); 
+                        publisher.textContent = data[0].summary.publisher; 
+                        const pubdate = document.getElementById("pubdate"); 
+                        pubdate.textContent = data[0].summary.pubdate;
+                        const author = document.getElementById("author"); 
+                        author.textContent = data[0].summary.author;
+                        const title = document.getElementById("title"); 
+                        title.textContent = data[0].summary.title;
                     };
                     request.send();
                 }
 
-                const ISBN = "978-4003275016"
-                getInfo(ISBN); 
-
+                function submitInfo(){
+                    //get IBNS from input
+                    const ibsn = document.getElementById("ibsn"); 
+                    let IBSN = (ibsn.value).replace("-","");
+                    IBSN = Number(IBSN);
+                    //call getInfo()
+                    getInfo(IBSN); 
+                }
+                let submit = document.getElementById("search");
+                submit.addEventListener("click", submitInfo); 
             }
 
             </script>
@@ -45,7 +58,12 @@
         
         <div class="parent">
             <div class="div1">
-                <div id="result">break time</div>
+                <div class="result">
+                    <div id="publisher">Search book information</div>
+                    <div id="pubdate"></div>
+                    <div id="author"></div>
+                    <div id="title"></div>
+                </div>
             </div>
             <div class="div2">
                 <div class="form_group">
