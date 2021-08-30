@@ -9,7 +9,62 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
         <link href="styles.css" rel="stylesheet">
         <script>
-        </script>
+            window.onload = function(){
+
+                // let arrayOfISBN = ["", "4-900354-00-7", "4-900354-01-5", "4-900354-02-3", "4-900354-03-1", "4-900354-04-X", "4-900354-05-8", "4-900354-06-6", "4-900354-07-4", "4-900354-08-2", "4-900354-09-0", "4-900354-10-4", "4-900354-11-2", "4-900354-12-0", "4-900354-13-9", "4-900354-14-7", "4-900354-15-5", "4-900354-16-3", "4-900354-17-1", "4-900354-18-X", "4-900354-19-8", "4-900354-20-1", "4-900354-21-X", "4-900354-22-8", "4-900354-23-6", "4-900354-24-4", "4-900354-25-2", "4-900354-26-0", "4-900354-27-9", "4-900354-28-7", "4-900354-29-5", "4-900354-30-9", "4-900354-31-7", "4-900354-32-5", "4-900354-33-3", "4-900354-34-1", "4-900354-35-X", "4-900354-36-8", "4-900354-37-6", "4-900354-38-4", "4-900354-39-2", "4-900354-40-6", "4-900354-41-4", "4-900354-42-2", "4-900354-43-0", "4-900354-44-9", "4-900354-45-7", "4-900354-46-5", "4-900354-47-3", "4-900354-48-1", "4-900354-49-X", "4-900354-50-3", "4-900354-51-1", "4-900354-52-X", "4-900354-53-8", "4-900354-54-6", "4-900354-55-4", "4-900354-56-2", "4-900354-57-0", "4-900354-58-9", "4-900354-59-7", "4-900354-60-0", "4-900354-61-9", "4-900354-62-7", "4-900354-63-5", "4-900354-64-3", "4-900354-65-1", "4-900354-66-X<o:p></o:p>", "4-900354-67-8", "4-900354-68-6", "4-900354-69-4", "4-900354-70-8", "4-900354-71-6", "4-900354-72-4", "4-900354-73-2", "4-900354-74-0", "4-900354-75-9", "4-900354-76-7", "4-900354-77-5", "4-900354-78-3", "4-900354-79-1", "4-900354-80-5", "4-900354-81-3", "4-900354-82-1", "4-900354-83-X", "4-900354-84-8", "4-900354-85-6", "4-900354-86-4", "4-900354-87-2", "4-900354-88-0", "4-900354-89-9", "4-900354-90-2", "4-900354-91-0", "4-900354-92-9", "4-900354-93-7", "4-900354-94-5", "4-900354-95-3", "4-900354-96-1", "4-900354-97-X", "4-900354-98-8"]
+                let arrayOfISBN = ["978-4003275016", "9784582768312"]
+
+                function showBooks(array){
+                    let info = []; 
+                    let request = new XMLHttpRequest();
+                    for (let i = 0; i<array.length; i++){
+                        let isbn = array[i].split("-");
+                        isbn = isbn.join(""); 
+                        isbn = Number(isbn);
+                        if (isbn){
+                            // console.log(isbn); 
+                            let ISBN = isbn; 
+                            request.open('GET', `https://api.openbd.jp/v1/get?isbn=${ISBN}&pretty`, true)
+                            
+                            request.responseType = 'json';
+             
+                            request.onload = function () {
+                            let data = this.response;
+                            console.log(data);
+                            info.push(data);
+                        };
+                        
+                        request.send();
+                    }
+                }
+                    return info; 
+                }
+                console.log(showBooks(arrayOfISBN)); 
+
+                
+
+                /*
+                let spans = document.getElementsByTagName("span");
+                function show5
+                (array){
+                    let result = []; 
+                    for ( let i = 0; i< array.length; i++ ){
+                        if ( spans[i].innerHTML.includes("ISBN")){
+                            // console.log(spans[i].innerHTML)
+                            let isbnNumber = (spans[i].innerHTML).replace("ISBN",""); 
+                            // console.log(isbnNumber); 
+                            result.push(isbnNumber); 
+
+                        }
+                    }
+                    console.log(result)
+                    return result; 
+                }
+                show5(spans)
+                */
+            }
+
+            </script>
     </head>
     <body>
         <h3 class="page_title">Break time</h3>
@@ -18,7 +73,7 @@
             <a href="./about.html">About me</a>
             <a href="./index.html">Home</a>
         </div>
-        <div>break time</div>
+        <div id="breaktime">break time</div>
         </body>
         </html>
 
