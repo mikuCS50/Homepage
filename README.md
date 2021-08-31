@@ -22,7 +22,7 @@ https://stackoverflow.com/questions/33767533/what-does-the-shrink-to-fit-viewpor
 - window onload 
 https://qiita.com/cervomansan/items/0873026853686503fc3a
 
-- ブラウザで使えるDB
+- Websql 
 https://mebee.info/2020/10/22/post-21073/
 https://qiita.com/hysdsk/items/6dfc55f35db24614107d
 
@@ -32,17 +32,17 @@ https://developer.mozilla.org/ja/docs/Glossary/IIFE
 - Promise
 https://qiita.com/cheez921/items/41b744e4e002b966391a
 
-- animation coffee
-https://codepen.io/v_Bauer/pen/zYrBoJa
-
-- book
-https://qiita.com/duka/items/3b1968be36ddbcfde25a
-
-- api with html/javascript
+- api with html/javascript, Ajax 
 https://techacademy.jp/magazine/19615
 
 - openbd
 https://openbd.jp/
 https://www.y-shinno.com/openbd/
+
+- animation coffee
+https://codepen.io/v_Bauer/pen/zYrBoJa
+
+- book
+https://qiita.com/duka/items/3b1968be36ddbcfde25a
 
 
