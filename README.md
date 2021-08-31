@@ -34,6 +34,11 @@ https://qiita.com/cheez921/items/41b744e4e002b966391a
 
 - api with html/javascript, Ajax 
 https://techacademy.jp/magazine/19615
+https://qiita.com/hisamura333/items/e3ea6ae549eb09b7efb9
+https://ja.javascript.info/xmlhttprequest
+
+- jQuery
+https://webcat.work/jquery-introduction/
 
 - openbd
 https://openbd.jp/
