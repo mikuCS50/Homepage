@@ -1,17 +1,17 @@
-## Home page
+## Homepage
 
-### 内容
+### Contents
 CS50x 2021の8週目の課題として、HTMLとCSSを使用しホームページを作成しました。
-Websqlを使用しサーバーを立てずにデータを保存できることと、Web apiを使用し本の検索ができるようにしております。
+Websqlを使用しサーバーを立てずにデータを保存できること、Web apiを使用し本の検索ができるように実装しました。
 
 As an assignment for week 8 of CS50x 2021, I created a website using HTML and CSS.
-I used websql to store data without setting up a server, and web api to search for books.
+The features are using websql to store data without setting up a server and web api to search for books.
 
-![](https://i.ibb.co/Ykb5SPh/2021-08-30-190957.jpg)
-![](https://i.ibb.co/1mVXRPW/2021-08-30-191031.jpg)
-![](https://i.ibb.co/GxQk9Dw/2021-08-30-191053.jpg)
+#### Image
 
-#### 参考資料
+![demo](https://user-images.githubusercontent.com/58237700/131600782-a3ba23e9-20d9-4855-b3ff-ecdb9a287ead.gif)
+
+#### Refferencial materials
 
 - vieportについて
 https://www.kagoya.jp/howto/webhomepage/responsive/<br>
@@ -20,7 +20,7 @@ https://stackoverflow.com/questions/33767533/what-does-the-shrink-to-fit-viewpor
 - window onload 
 https://qiita.com/cervomansan/items/0873026853686503fc3a
 
-- ブラウザで使えるDB
+- Websql 
 https://mebee.info/2020/10/22/post-21073/
 https://qiita.com/hysdsk/items/6dfc55f35db24614107d
 
@@ -30,17 +30,22 @@ https://developer.mozilla.org/ja/docs/Glossary/IIFE
 - Promise
 https://qiita.com/cheez921/items/41b744e4e002b966391a
 
+- api with html/javascript, Ajax 
+https://techacademy.jp/magazine/19615
+https://qiita.com/hisamura333/items/e3ea6ae549eb09b7efb9
+https://ja.javascript.info/xmlhttprequest
+
+- jQuery
+https://webcat.work/jquery-introduction/
+
+- openbd
+https://openbd.jp/
+https://www.y-shinno.com/openbd/
+
 - animation coffee
 https://codepen.io/v_Bauer/pen/zYrBoJa
 
 - book
 https://qiita.com/duka/items/3b1968be36ddbcfde25a
-
-- api with html/javascript
-https://techacademy.jp/magazine/19615
-
-- openbd
-https://openbd.jp/
-https://www.y-shinno.com/openbd/
 
 
