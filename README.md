@@ -24,9 +24,6 @@ https://qiita.com/cervomansan/items/0873026853686503fc3a
 https://mebee.info/2020/10/22/post-21073/
 https://qiita.com/hysdsk/items/6dfc55f35db24614107d
 
-- 即時実行関数式
-https://developer.mozilla.org/ja/docs/Glossary/IIFE
-
 - Promise
 https://qiita.com/cheez921/items/41b744e4e002b966391a
 
@@ -42,10 +39,5 @@ https://webcat.work/jquery-introduction/
 https://openbd.jp/
 https://www.y-shinno.com/openbd/
 
-- animation coffee
-https://codepen.io/v_Bauer/pen/zYrBoJa
-
-- book
-https://qiita.com/duka/items/3b1968be36ddbcfde25a
 
 
