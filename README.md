@@ -2,10 +2,10 @@
 
 ### Contents
 CS50x 2021の8週目の課題として、HTMLとCSSを使用しホームページを作成しました。
-Websqlを使用しサーバーを立てずにデータを保存できることと、Web apiを使用し本の検索ができるようにしております。
+Websqlを使用しサーバーを立てずにデータを保存できること、Web apiを使用し本の検索ができるように実装しました。
 
 As an assignment for week 8 of CS50x 2021, I created a website using HTML and CSS.
-I used websql to store data without setting up a server, and web api to search for books.
+The features are using websql to store data without setting up a server and web api to search for books.
 
 #### Image
 
