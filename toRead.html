@@ -26,32 +26,58 @@
                     db.transaction(
                         function (transact){
                         transact.executeSql("CREATE TABLE bookInfo ( author, title)", [],
-                            function () { print("CREATE TABLE SUCCESS");},// 成功コールバック
+                            async function () { 
+                                await print("CREATE TABLE SUCCESS");
+                        },// 成功コールバック
                             function () { print("CREATE TABLE ERROR"); }// 失敗コールバック
                         )}
                     )}
                 const make = document.getElementById("make");
                 make.addEventListener("click", CreateTable); 
              
-                //テーブルを削除
+                //テーブルを削除し、新たなテーブルを作成する
                 function DropTable() {
-                    db.transaction(
-                    function (transact) {
-                        transact.executeSql("DROP TABLE IF EXISTS bookInfo", [],
-                        function () { print("DROP TABLE SUCCESS"); },
-                        function () { print("DROP TABLE ERROR"); }
-                        );
-                    });
+                    new Promise((resolve) => {
+                        db.transaction(
+                        function (transact) {
+                            transact.executeSql("DROP TABLE IF EXISTS bookInfo", [],
+                            function () { 
+                                console.log("DROP TABLE SUCCESS");
+                                        resolve(); 
+                                },
+                            function () { 
+                                console.log("DROP TABLE ERROR"); 
+                                }
+                            );
+                            });
+                    }).then(() => {
+                        console.log("create table"); 
+                        CreateTable()
+                        // const make = document.getElementById("make");
+                        // make.addEventListener("click", CreateTable); 
+                    }).then(() =>{
+                        console.log("reload page"); 
+                        setTimeout(() => {
+                            reload(); 
+                        }, 2000);
+                    })
                 }
                 const dropTable = document.getElementById("drop");
                 dropTable.addEventListener("click", DropTable); 
-          
+                
                 // コンソールに結果を出力
                 function print(msg) {
-                    console.log(msg);
                     const message = document.getElementById("msg");
                     message.innerText = msg;
-                    setTimeout(()=> { message.innerText = ""}, 3000);
+                    setTimeout(()=> { 
+                        message.innerText = "";
+                        return; 
+                    }, 3000);
+                }
+
+                //リロードする
+                function reload(){
+                    location.reload(); 
                 }
             
                 //本を登録する
@@ -63,14 +89,18 @@
                     db.transaction(
                         function(transact){
                             transact.executeSql("INSERT INTO bookInfo VALUES ( ?, ?)", [dbAuthor, dbTitle], 
-                            function () { print("Insert Record SUCCESS");},// 成功コールバック
-                            function () { print("Insert Record ERROR"); }// 失敗コールバック
+                            function () { 
+                                print("Insert Record SUCCESS")
+                                // setTimeout(()=>{
+                                //     location.reload()
+                                // }, 1000)
+                            },// 成功コールバック
+                            function () { console.log("Insert Record ERROR"); }// 失敗コールバック
                             ); 
-                        }
-                    )
-                    title.value = "";
-                    author.value = ""; 
-                }    
+                        })
+                        title.value = "";
+                        author.value = ""; 
+                    }    
                 const submitBookInfo = document.getElementById("submit");
                 submitBookInfo.addEventListener("click", insertRecord); 
     
@@ -82,7 +112,6 @@
                     function (tx, results) {
                         // SUCCESS
                         const booklist = document.getElementById("base"); 
-            
                         for (let i = 0; i < results.rows.length; i++){
                             author = results.rows.item(i).author.replace('\'','');
                             author = author.replace('\'','');
@@ -92,15 +121,17 @@
                             const list = document.createElement("div"); 
                             list.innerText = book; 
                             booklist.appendChild(list); 
+                            
                         }
                     },
                     function(err){
                         // ERROR
                         print("Insert Record ERROR")
-                    })
+                    }
+                    )
                 })
                 }
-                showList(); 
+                showList(); //droplist後、テーブルがないとエラーメッセージが表示される。テーブルがある場合だけ読み込むようにする
             }
             </script>
         </head>
@@ -120,8 +151,8 @@
             </div>
             <div class="div2">
                 <div class="form_group">
-                    <input type="text" class="form" id="author" required placeholder="author">
-                    <input type="text" class="form" id="title" required placeholder="title">
+                    <input type="text" class="form" id="author" placeholder="author">
+                    <input type="text" class="form" id="title" placeholder="title">
                 </div>
                 <div class="button_group">
                     <div id="msg"></div>
