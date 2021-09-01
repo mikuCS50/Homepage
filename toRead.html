@@ -32,8 +32,6 @@
                             function () { print("CREATE TABLE ERROR"); }// 失敗コールバック
                         )}
                     )}
-                const make = document.getElementById("make");
-                make.addEventListener("click", CreateTable); 
              
                 //テーブルを削除し、新たなテーブルを作成する
                 function DropTable() {
@@ -53,8 +51,6 @@
                     }).then(() => {
                         console.log("create table"); 
                         CreateTable()
-                        // const make = document.getElementById("make");
-                        // make.addEventListener("click", CreateTable); 
                     }).then(() =>{
                         console.log("reload page"); 
                         setTimeout(() => {
@@ -86,52 +82,58 @@
                     const title = document.getElementById("title"); 
                     const dbAuthor = `'${author.value}'`; 
                     const dbTitle = `'${title.value}'`; 
-                    db.transaction(
-                        function(transact){
-                            transact.executeSql("INSERT INTO bookInfo VALUES ( ?, ?)", [dbAuthor, dbTitle], 
-                            function () { 
-                                print("Insert Record SUCCESS")
-                                // setTimeout(()=>{
-                                //     location.reload()
-                                // }, 1000)
-                            },// 成功コールバック
-                            function () { console.log("Insert Record ERROR"); }// 失敗コールバック
-                            ); 
-                        })
-                        title.value = "";
-                        author.value = ""; 
+                    new Promise((resolve)=>{
+                        db.transaction(
+                            function(transact){
+                                transact.executeSql("INSERT INTO bookInfo VALUES ( ?, ?)", [dbAuthor, dbTitle], 
+                                function () { 
+                                    print("Insert Record SUCCESS")
+                                },// 成功コールバック
+                                function () { 
+                                    console.log("Insert Record ERROR"); 
+                                }// 失敗コールバック
+                                ); 
+                            })
+                            title.value = "";
+                            author.value = ""; 
+                            resolve(); 
+                    })
+                    .then(()=>{
+                        setTimeout(()=>{
+                            reload(); 
+                        }, 2000)
+                    })
                     }    
                 const submitBookInfo = document.getElementById("submit");
                 submitBookInfo.addEventListener("click", insertRecord); 
     
                 //本を表示
                 function showList(){
-                    db.transaction(
-                        function (tx) {
-                    tx.executeSql('select * from bookInfo', [],
-                    function (tx, results) {
-                        // SUCCESS
-                        const booklist = document.getElementById("base"); 
-                        for (let i = 0; i < results.rows.length; i++){
-                            author = results.rows.item(i).author.replace('\'','');
-                            author = author.replace('\'','');
-                            title = results.rows.item(i).title.replace('\'','');
-                            title = title.replace('\'','');
-                            const book = `${author} : ${title}`
-                            const list = document.createElement("div"); 
-                            list.innerText = book; 
-                            booklist.appendChild(list); 
-                            
-                        }
-                    },
-                    function(err){
-                        // ERROR
-                        print("Insert Record ERROR")
-                    }
-                    )
-                })
+                    // new Promise((resolve)=> {
+                        db.transaction(
+                            function (tx) {
+                        tx.executeSql('select * from bookInfo', [],
+                        function (tx, results) {
+                            // SUCCESS
+                            const booklist = document.getElementById("base"); 
+                            for (let i = 0; i < results.rows.length; i++){
+                                author = results.rows.item(i).author.replace('\'','');
+                                author = author.replace('\'','');
+                                title = results.rows.item(i).title.replace('\'','');
+                                title = title.replace('\'','');
+                                const book = `${author} : ${title}`
+                                const list = document.createElement("div"); 
+                                list.innerText = book; 
+                                booklist.appendChild(list); 
+                            }
+                        },
+                        function(err){
+                            // ERROR
+                            print("Insert Record ERROR")
+                        })
+                    })
                 }
-                showList(); //droplist後、テーブルがないとエラーメッセージが表示される。テーブルがある場合だけ読み込むようにする
+                showList(); 
             }
             </script>
         </head>
@@ -155,17 +157,15 @@
                     <input type="text" class="form" id="title" placeholder="title">
                 </div>
                 <div class="button_group">
-                    <div id="msg"></div>
                     <div>
                         <button type="button" class="btn btn-primary" id="submit">Submit</button>
                     </div>
                     <div>
                     </div>
                     <div class="commands">
-                        <div id="make">make list</div>
-                        <div>/</div>
-                        <div id="drop">drop list</div>
-                    </div>
+                            <div id="drop">Get new list</div>
+                            <div id="msg">message</div>
+                        </div>
                 </div>
 
             </div>

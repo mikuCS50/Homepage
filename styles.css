@@ -84,9 +84,14 @@ button {
 
 .commands {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   color: black;
+}
+
+.commands #msg{
+  color: gainsboro;
 }
 
 .vidual {
