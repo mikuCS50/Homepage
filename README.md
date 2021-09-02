@@ -1,17 +1,24 @@
 ## Homepage
 
-### Contents
-CS50x 2021の8週目の課題として、HTMLとCSSを使用しホームページを作成しました。
+### About 
+CS50x 2021の8週目の課題として、読みたい本をメモできるアプリを作成しました。<br>
+
+As an assignment for week 8 of CS50x 2021, <br>I created an app to note books which I'd like to read later.
+
+
+### Tech
+HTML, CSS, JavaScript, Websql, Web ApI 
+
+### Feature 
 Websqlを使用しサーバーを立てずにデータを保存できること、Web apiを使用し本の検索ができるように実装しました。
 
-As an assignment for week 8 of CS50x 2021, I created a website using HTML and CSS.
 The features are using websql to store data without setting up a server and web api to search for books.
 
-#### Image
+### Image
 
 ![demo](https://user-images.githubusercontent.com/58237700/131648584-dfe919b6-6d95-4185-bcb2-99941bdd42fb.gif)
 
-#### Refferencial materials
+###### Refferencial materials
 
 
 > vieportについて<br>
