@@ -13,31 +13,32 @@ The features are using websql to store data without setting up a server and web 
 
 #### Refferencial materials
 
-- vieportについて
-https://www.kagoya.jp/howto/webhomepage/responsive/<br>
-https://stackoverflow.com/questions/33767533/what-does-the-shrink-to-fit-viewport-meta-attribute-do
 
-- window onload 
-https://qiita.com/cervomansan/items/0873026853686503fc3a
+> vieportについて<br>
+> https://www.kagoya.jp/howto/webhomepage/responsive/<br>
+>https://stackoverflow.com/questions/33767533/what-does-the-shrink-to-fit-viewport-meta-attribute-do
 
-- Websql 
-https://mebee.info/2020/10/22/post-21073/
-https://qiita.com/hysdsk/items/6dfc55f35db24614107d
+> window onload<br> 
+> https://qiita.com/cervomansan/items/0873026853686503fc3a
 
-- Promise
-https://qiita.com/cheez921/items/41b744e4e002b966391a
+> Websql<br> 
+> https://mebee.info/2020/10/22/post-21073/
+> https://qiita.com/hysdsk/items/6dfc55f35db24614107d
 
-- api with html/javascript, Ajax 
-https://techacademy.jp/magazine/19615
-https://qiita.com/hisamura333/items/e3ea6ae549eb09b7efb9
-https://ja.javascript.info/xmlhttprequest
+> Promise<br>
+> https://qiita.com/cheez921/items/41b744e4e002b966391a
 
-- jQuery
-https://webcat.work/jquery-introduction/
+> api with html/javascript, Ajax<br> 
+> https://techacademy.jp/magazine/19615
+> https://qiita.com/hisamura333/items/e3ea6ae549eb09b7efb9
+> https://ja.javascript.info/xmlhttprequest
 
-- openbd
-https://openbd.jp/
-https://www.y-shinno.com/openbd/
+> jQuery<br>
+> https://webcat.work/jquery-introduction/
+
+> openbd<br> 
+> https://openbd.jp/
+> https://www.y-shinno.com/openbd/
 
 
 
