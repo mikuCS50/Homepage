@@ -1,51 +1,51 @@
 ## Homepage
 
-### Contents
-CS50x 2021の8週目の課題として、HTMLとCSSを使用しホームページを作成しました。
+### About 📚 🐛
+CS50x 2021の8週目の課題として、読みたい本をメモできるアプリを作成しました。<br>
+
+As an assignment for week 8 of CS50x 2021, <br>I created an app to note books which I'd like to read later.
+
+
+### Tech
+HTML, CSS, JavaScript, Websql, Web ApI 
+
+### Feature 
 Websqlを使用しサーバーを立てずにデータを保存できること、Web apiを使用し本の検索ができるように実装しました。
 
-As an assignment for week 8 of CS50x 2021, I created a website using HTML and CSS.
 The features are using websql to store data without setting up a server and web api to search for books.
 
-#### Image
+### Image
 
-![demo](https://user-images.githubusercontent.com/58237700/131600782-a3ba23e9-20d9-4855-b3ff-ecdb9a287ead.gif)
+![demo](https://user-images.githubusercontent.com/58237700/131842209-ee093e41-aa22-4425-82c2-28221f279149.gif)
 
-#### Refferencial materials
+###### Refferencial materials
 
-- vieportについて
-https://www.kagoya.jp/howto/webhomepage/responsive/<br>
-https://stackoverflow.com/questions/33767533/what-does-the-shrink-to-fit-viewport-meta-attribute-do
 
-- window onload 
-https://qiita.com/cervomansan/items/0873026853686503fc3a
+> vieportについて<br>
+> https://www.kagoya.jp/howto/webhomepage/responsive/<br>
+>https://stackoverflow.com/questions/33767533/what-does-the-shrink-to-fit-viewport-meta-attribute-do
 
-- Websql 
-https://mebee.info/2020/10/22/post-21073/
-https://qiita.com/hysdsk/items/6dfc55f35db24614107d
+> window onload<br> 
+> https://qiita.com/cervomansan/items/0873026853686503fc3a
 
-- 即時実行関数式
-https://developer.mozilla.org/ja/docs/Glossary/IIFE
+> Websql<br> 
+> https://mebee.info/2020/10/22/post-21073/
+> https://qiita.com/hysdsk/items/6dfc55f35db24614107d
 
-- Promise
-https://qiita.com/cheez921/items/41b744e4e002b966391a
+> Promise<br>
+> https://qiita.com/cheez921/items/41b744e4e002b966391a
 
-- api with html/javascript, Ajax 
-https://techacademy.jp/magazine/19615
-https://qiita.com/hisamura333/items/e3ea6ae549eb09b7efb9
-https://ja.javascript.info/xmlhttprequest
+> api with html/javascript, Ajax<br> 
+> https://techacademy.jp/magazine/19615
+> https://qiita.com/hisamura333/items/e3ea6ae549eb09b7efb9
+> https://ja.javascript.info/xmlhttprequest
 
-- jQuery
-https://webcat.work/jquery-introduction/
+> jQuery<br>
+> https://webcat.work/jquery-introduction/
 
-- openbd
-https://openbd.jp/
-https://www.y-shinno.com/openbd/
+> openbd<br> 
+> https://openbd.jp/
+> https://www.y-shinno.com/openbd/
 
-- animation coffee
-https://codepen.io/v_Bauer/pen/zYrBoJa
-
-- book
-https://qiita.com/duka/items/3b1968be36ddbcfde25a
 
 
