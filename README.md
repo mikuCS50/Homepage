@@ -1,6 +1,6 @@
 ## Homepage
 
-### About 
+### About 📚 🐛
 CS50x 2021の8週目の課題として、読みたい本をメモできるアプリを作成しました。<br>
 
 As an assignment for week 8 of CS50x 2021, <br>I created an app to note books which I'd like to read later.
