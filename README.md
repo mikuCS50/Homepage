@@ -28,23 +28,25 @@ The features are using websql to store data without setting up a server and web 
 > window onload<br> 
 > https://qiita.com/cervomansan/items/0873026853686503fc3a
 
-> Websql<br> 
-> https://mebee.info/2020/10/22/post-21073/
-> https://qiita.com/hysdsk/items/6dfc55f35db24614107d
+> Websql ※ 2022/4 chromeで非推奨<br>  
+> https://mebee.info/2020/10/22/post-21073/<br>
+> https://qiita.com/hysdsk/items/6dfc55f35db24614107d<br>
+> 
+> →　indexDBは使用可能　<br>https://otiai10.hatenablog.com/entry/2015/01/30/020858
 
 > Promise<br>
 > https://qiita.com/cheez921/items/41b744e4e002b966391a
 
 > api with html/javascript, Ajax<br> 
-> https://techacademy.jp/magazine/19615
-> https://qiita.com/hisamura333/items/e3ea6ae549eb09b7efb9
+> https://techacademy.jp/magazine/19615<br>
+> https://qiita.com/hisamura333/items/e3ea6ae549eb09b7efb9<br>
 > https://ja.javascript.info/xmlhttprequest
 
 > jQuery<br>
 > https://webcat.work/jquery-introduction/
 
 > openbd<br> 
-> https://openbd.jp/
+> https://openbd.jp/<br>
 > https://www.y-shinno.com/openbd/
 
 
